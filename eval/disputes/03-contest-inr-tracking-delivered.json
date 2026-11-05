@@ -1,0 +1,18 @@
+{
+  "id": "03-contest-inr-tracking-delivered",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44025",
+  "buyer": "tom.halverstadt@example.com",
+  "reason": "ITEM_NOT_RECEIVED",
+  "title": "Package not received",
+  "body": "Ordered a coffee grinder Oct 24 for $182.50. The seller says it shipped but I never got anything. I work from home and was here all week. Nothing was left at my door. Tracking number the seller gave me says delivered but that's wrong \u2014 maybe it went to the wrong house. Either way I don't have the item and I want my money back.",
+  "amount": 182.5,
+  "currency": "USD",
+  "transaction_id": "3RC67912SE8448324",
+  "attachments": [
+    "tracking_screenshot.png",
+    "message_thread.txt"
+  ],
+  "status": "received",
+  "created_at": "2026-11-02T17:41:03Z"
+}

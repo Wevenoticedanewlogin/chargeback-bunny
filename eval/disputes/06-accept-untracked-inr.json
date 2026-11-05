@@ -1,0 +1,15 @@
+{
+  "id": "06-accept-untracked-inr",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44044",
+  "buyer": "dana.k.rivers@example.com",
+  "reason": "ITEM_NOT_RECEIVED",
+  "title": "Small order never arrived",
+  "body": "Hello \u2014 I ordered a phone case on Oct 12 ($34.99) and it still hasn't arrived as of Oct 28. I know it was cheap shipping so there's no tracking, which I understand, but it's been over two weeks past the estimate. I'd appreciate a refund, or a replacement if that's easier. Thanks.",
+  "amount": 34.99,
+  "currency": "USD",
+  "transaction_id": "9HD33017QW118745N",
+  "attachments": [],
+  "status": "received",
+  "created_at": "2026-10-28T11:30:52Z"
+}

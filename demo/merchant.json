@@ -1,0 +1,6 @@
+{
+  "name": "Acme Widgets",
+  "paypal_merchant_id": "ACME-MERCH-1",
+  "autonomy": "supervised",
+  "auto_respond_cap": 100.0
+}

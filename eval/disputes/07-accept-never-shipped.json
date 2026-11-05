@@ -1,0 +1,18 @@
+{
+  "id": "07-accept-never-shipped",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44047",
+  "buyer": "rosa.delgado@example.com",
+  "reason": "ITEM_NOT_RECEIVED",
+  "title": "Order never shipped out",
+  "body": "I bought a candle set Oct 15 for $42.50. The order page has said 'processing' for two weeks and the seller stopped answering my messages on Oct 22. Nothing was ever shipped. I just want a refund at this point.",
+  "amount": 42.5,
+  "currency": "USD",
+  "transaction_id": "2TM88405FJ662903R",
+  "attachments": [
+    "order_page_screenshot.png",
+    "message_thread.txt"
+  ],
+  "status": "received",
+  "created_at": "2026-10-29T15:47:21Z"
+}

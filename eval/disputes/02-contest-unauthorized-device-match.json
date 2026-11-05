@@ -1,0 +1,17 @@
+{
+  "id": "02-contest-unauthorized-device-match",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44018",
+  "buyer": "priya.nand@example.com",
+  "reason": "UNAUTHORIZED",
+  "title": "I did not make this purchase",
+  "body": "I don't recognize this $45.00 charge on my PayPal. I never bought any software license from this seller. Someone must have gotten into my account. Please refund immediately, this is fraud. I already changed my password.",
+  "amount": 45.0,
+  "currency": "USD",
+  "transaction_id": "8KW42038LN552810B",
+  "attachments": [
+    "account_screenshot.png"
+  ],
+  "status": "received",
+  "created_at": "2026-10-29T09:05:44Z"
+}

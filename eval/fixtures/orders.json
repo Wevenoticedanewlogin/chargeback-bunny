@@ -1,0 +1,913 @@
+{
+  "items": [
+    {
+      "id": "5O190127TN914715T",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "samantha.oreilly@example.com",
+        "payer_id": "PAYER01X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "89.99"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "5O190127TN914CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "89.99"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "1Z999AA10123456784",
+                "status": "DELIVERED",
+                "carrier": "UPS",
+                "last_updated_time": "2026-10-28T13:02:00Z",
+                "delivery_detail": "Signed by S. OREILLY, front door"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-11-01T14:22:10Z",
+      "update_time": "2026-11-01T14:22:10Z"
+    },
+    {
+      "id": "8KW42038LN552810B",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "priya.nand@example.com",
+        "payer_id": "PAYER02X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "45.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "8KW42038LN552CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "45.00"
+                }
+              }
+            ]
+          },
+          "items": [
+            {
+              "name": "I did not make this purchase",
+              "quantity": "1",
+              "category": "DIGITAL_GOODS"
+            }
+          ]
+        }
+      ],
+      "create_time": "2026-10-29T09:05:44Z",
+      "update_time": "2026-10-29T09:05:44Z",
+      "payment_source": {
+        "card": {
+          "authentication_result": {
+            "liability_shift": "POSSIBLE",
+            "three_d_secure": {
+              "enrollment_status": "Y",
+              "authentication_status": "Y"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "3RC67912SE8448324",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "tom.halverstadt@example.com",
+        "payer_id": "PAYER03X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "182.50"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "3RC67912SE844CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "182.50"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "9400108205497012345678",
+                "status": "DELIVERED",
+                "carrier": "USPS",
+                "last_updated_time": "2026-10-30T11:47:00Z",
+                "delivery_detail": "Delivered, front porch, confirmed address"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-11-02T17:41:03Z",
+      "update_time": "2026-11-02T17:41:03Z"
+    },
+    {
+      "id": "1AB20984PK739221C",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "jules.marchand@example.com",
+        "payer_id": "PAYER04X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "129.99"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "1AB20984PK739CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "129.99"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "9274899998543201234567",
+                "status": "DELIVERED",
+                "carrier": "USPS",
+                "last_updated_time": "2026-10-30T14:15:00Z",
+                "delivery_detail": "Delivered with photo confirmation, front porch"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-11-02T08:15:37Z",
+      "update_time": "2026-11-02T08:15:37Z"
+    },
+    {
+      "id": "6VF55102MT903418L",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "kwame.adjei@example.com",
+        "payer_id": "PAYER05X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "64.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "6VF55102MT903CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "64.00"
+                }
+              }
+            ]
+          },
+          "items": [
+            {
+              "name": "Unauthorized subscription charge",
+              "quantity": "1",
+              "category": "DIGITAL_GOODS"
+            }
+          ]
+        }
+      ],
+      "create_time": "2026-10-30T21:02:19Z",
+      "update_time": "2026-10-30T21:02:19Z",
+      "payment_source": {
+        "card": {
+          "authentication_result": {
+            "liability_shift": "POSSIBLE",
+            "three_d_secure": {
+              "enrollment_status": "Y",
+              "authentication_status": "Y"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "9HD33017QW118745N",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "dana.k.rivers@example.com",
+        "payer_id": "PAYER06X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "34.99"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "9HD33017QW118CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "34.99"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            }
+          }
+        }
+      ],
+      "create_time": "2026-10-28T11:30:52Z",
+      "update_time": "2026-10-28T11:30:52Z"
+    },
+    {
+      "id": "2TM88405FJ662903R",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "rosa.delgado@example.com",
+        "payer_id": "PAYER07X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "42.50"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "2TM88405FJ662CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "42.50"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [],
+            "fulfillment_status": "NOT_SHIPPED"
+          }
+        }
+      ],
+      "create_time": "2026-10-29T15:47:21Z",
+      "update_time": "2026-10-29T15:47:21Z"
+    },
+    {
+      "id": "7QE11392XA448517D",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "henk.jansen@example.com",
+        "payer_id": "PAYER08X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "27.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "7QE11392XA448CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "27.00"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "9405511899564821034567",
+                "status": "IN_TRANSIT",
+                "carrier": "USPS",
+                "last_updated_time": "2026-10-09T06:30:00Z",
+                "delivery_detail": "In transit, arriving late \u2014 no scans since Oct 9"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-10-30T10:12:08Z",
+      "update_time": "2026-10-30T10:12:08Z"
+    },
+    {
+      "id": "4WZ66830UV227164K",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "mei.ling.chen@example.com",
+        "payer_id": "PAYER09X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "16.75"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "4WZ66830UV227CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "16.75"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            }
+          }
+        }
+      ],
+      "create_time": "2026-11-03T09:58:14Z",
+      "update_time": "2026-11-03T09:58:14Z"
+    },
+    {
+      "id": "0PL77419GB883026M",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "alex.petrova@example.com",
+        "payer_id": "PAYER10X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "119.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "0PL77419GB883CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "119.00"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "1Z999AA10123456791",
+                "status": "DELIVERED",
+                "carrier": "UPS",
+                "last_updated_time": "2026-10-27T10:05:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-10-31T13:24:45Z",
+      "update_time": "2026-10-31T13:24:45Z"
+    },
+    {
+      "id": "5XN90244HC559381P",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "marcus.bell@example.com",
+        "payer_id": "PAYER11X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "85.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "5XN90244HC559CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "85.00"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "YT2626300012345678",
+                "status": "DELIVERED",
+                "carrier": "YANWEN",
+                "last_updated_time": "2026-10-26T09:12:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-11-01T19:37:29Z",
+      "update_time": "2026-11-01T19:37:29Z"
+    },
+    {
+      "id": "8JG44761RD990543T",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "sofia.almeida@example.com",
+        "payer_id": "PAYER12X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "159.99"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "8JG44761RD990CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "159.99"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "1Z999AA10123456805",
+                "status": "DELIVERED",
+                "carrier": "UPS",
+                "last_updated_time": "2026-10-25T15:40:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-10-30T16:08:51Z",
+      "update_time": "2026-10-30T16:08:51Z"
+    },
+    {
+      "id": "3KC22850TW771642B",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "david.okafor@example.com",
+        "payer_id": "PAYER13X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "239.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "3KC22850TW771CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "239.00"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "9261299998543209876543",
+                "status": "DELIVERED",
+                "carrier": "USPS",
+                "last_updated_time": "2026-10-29T12:20:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-11-02T12:44:36Z",
+      "update_time": "2026-11-02T12:44:36Z"
+    },
+    {
+      "id": "6QA55198BD334807F",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "lena.voss@example.com",
+        "payer_id": "PAYER14X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "780.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "6QA55198BD334CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "780.00"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "1Z999AA10123456812",
+                "status": "DELIVERED",
+                "carrier": "UPS",
+                "last_updated_time": "2026-10-24T13:55:00Z",
+                "delivery_detail": "Signed by L. VOSS"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-11-01T08:19:27Z",
+      "update_time": "2026-11-01T08:19:27Z"
+    },
+    {
+      "id": "9BS77042LG116925H",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "greg.wentworth@example.com",
+        "payer_id": "PAYER15X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "1380.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "9BS77042LG116CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "1380.00"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "1Z77W9200312345678",
+                "status": "ERROR",
+                "carrier": "UPS",
+                "last_updated_time": "2026-10-18T00:00:00Z",
+                "delivery_detail": "Tracking number not found in carrier system"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-11-03T20:31:55Z",
+      "update_time": "2026-11-03T20:31:55Z"
+    },
+    {
+      "id": "1RT99306KD552178J",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "kwame.adjei@example.com",
+        "payer_id": "PAYER16X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "620.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "1RT99306KD552CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "620.00"
+                }
+              }
+            ]
+          },
+          "items": [
+            {
+              "name": "Fraudulent charge on my account",
+              "quantity": "1",
+              "category": "DIGITAL_GOODS"
+            }
+          ]
+        }
+      ],
+      "create_time": "2026-11-02T23:11:40Z",
+      "update_time": "2026-11-02T23:11:40Z",
+      "payment_source": {
+        "card": {
+          "authentication_result": {
+            "liability_shift": "POSSIBLE",
+            "three_d_secure": {
+              "enrollment_status": "Y",
+              "authentication_status": "Y"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "4VG11487PT889350C",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "victor.slade@example.com",
+        "payer_id": "PAYER17X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "340.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "4VG11487PT889CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "340.00"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "9400108205497012349999",
+                "status": "DELIVERED",
+                "carrier": "USPS",
+                "last_updated_time": "2026-10-24T10:31:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-10-29T07:52:13Z",
+      "update_time": "2026-10-29T07:52:13Z"
+    },
+    {
+      "id": "8AF55620QR337491E",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "dana.k.rivers@example.com",
+        "payer_id": "PAYER19X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "74.50"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "8AF55620QR337CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "74.50"
+                }
+              }
+            ]
+          },
+          "shipping": {
+            "address": {
+              "address_line_1": "1 Main St",
+              "admin_area_2": "Springfield",
+              "admin_area_1": "IL",
+              "postal_code": "62701",
+              "country_code": "US"
+            },
+            "trackers": [
+              {
+                "id": "9274899998543207654321",
+                "status": "DELIVERED",
+                "carrier": "USPS",
+                "last_updated_time": "2026-10-31T11:08:00Z",
+                "delivery_detail": "Delivered, mailbox"
+              }
+            ]
+          }
+        }
+      ],
+      "create_time": "2026-11-03T16:45:22Z",
+      "update_time": "2026-11-03T16:45:22Z"
+    },
+    {
+      "id": "5DJ88213NN740216V",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "payer": {
+        "email_address": "priya.nand@example.com",
+        "payer_id": "PAYER20X7Q2"
+      },
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {
+            "currency_code": "USD",
+            "value": "55.00"
+          },
+          "payments": {
+            "captures": [
+              {
+                "id": "5DJ88213NN740CAP1",
+                "status": "COMPLETED",
+                "amount": {
+                  "currency_code": "USD",
+                  "value": "55.00"
+                }
+              }
+            ]
+          },
+          "items": [
+            {
+              "name": "Unauthorized payment, demand transparency",
+              "quantity": "1",
+              "category": "DIGITAL_GOODS"
+            }
+          ]
+        }
+      ],
+      "create_time": "2026-11-02T11:03:47Z",
+      "update_time": "2026-11-02T11:03:47Z"
+    }
+  ]
+}

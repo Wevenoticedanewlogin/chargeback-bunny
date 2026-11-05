@@ -1,0 +1,18 @@
+{
+  "id": "13-refund-missing-accessories",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44079",
+  "buyer": "david.okafor@example.com",
+  "reason": "SNAD",
+  "title": "Missing accessories from listing",
+  "body": "Received the monitor I ordered ($239.00) but the box was missing the HDMI cable and the remote that were both shown in the listing photos and mentioned in the description ('all original accessories included'). The monitor works fine. Refund the cost of the missing parts or send them, either is fine with me.",
+  "amount": 239.0,
+  "currency": "USD",
+  "transaction_id": "3KC22850TW771642B",
+  "attachments": [
+    "listing_screenshot.png",
+    "unboxing_photo.jpg"
+  ],
+  "status": "received",
+  "created_at": "2026-11-02T12:44:36Z"
+}

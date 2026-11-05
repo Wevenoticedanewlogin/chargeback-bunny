@@ -1,0 +1,18 @@
+{
+  "id": "10-refund-snad-color-mismatch",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44066",
+  "buyer": "alex.petrova@example.com",
+  "reason": "SNAD",
+  "title": "Wrong color sent",
+  "body": "I ordered the navy blue backpack ($119.00) and received a black one. The listing photos clearly show navy and the dropdown said 'Navy'. The bag itself is fine quality so I don't want to deal with a return, but it's not what I ordered. I'd accept a partial refund and keep it, or a full refund.",
+  "amount": 119.0,
+  "currency": "USD",
+  "transaction_id": "0PL77419GB883026M",
+  "attachments": [
+    "listing_screenshot.png",
+    "item_photo.jpg"
+  ],
+  "status": "received",
+  "created_at": "2026-10-31T13:24:45Z"
+}

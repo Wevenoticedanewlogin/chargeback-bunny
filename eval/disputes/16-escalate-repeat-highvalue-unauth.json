@@ -1,0 +1,17 @@
+{
+  "id": "16-escalate-repeat-highvalue-unauth",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44092",
+  "buyer": "kwame.adjei@example.com",
+  "reason": "UNAUTHORIZED",
+  "title": "Fraudulent charge on my account",
+  "body": "There is a charge of $620.00 from this store on my PayPal that I never approved. I have no account with this merchant and have never purchased anything from them. Whoever did this must have stolen my details. I expect an immediate reversal. Do not try to tell me I made this purchase \u2014 I know what I buy.",
+  "amount": 620.0,
+  "currency": "USD",
+  "transaction_id": "1RT99306KD552178J",
+  "attachments": [
+    "bank_statement_crop.png"
+  ],
+  "status": "received",
+  "created_at": "2026-11-02T23:11:40Z"
+}

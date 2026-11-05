@@ -1,0 +1,13 @@
+.env
+.credentials
+.venv/
+__pycache__/
+*.pyc
+*.db
+.DS_Store
+
+# internal build docs — not for the public repo
+HANDOFF.md
+CONTRACT.md
+credentials*
+SUBMISSION.md

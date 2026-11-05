@@ -1,0 +1,18 @@
+{
+  "id": "11-refund-snad-size-runs-small",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44070",
+  "buyer": "marcus.bell@example.com",
+  "reason": "SNAD",
+  "title": "Size not as described",
+  "body": "Bought a jacket listed as size L ($85.00). It fits like a small \u2014 I can't zip it. Their size chart says L = 42-44in chest and this measures 38in. Returning it overseas costs almost as much as the jacket. Meet me halfway on a refund?",
+  "amount": 85.0,
+  "currency": "USD",
+  "transaction_id": "5XN90244HC559381P",
+  "attachments": [
+    "size_chart_screenshot.png",
+    "measuring_photo.jpg"
+  ],
+  "status": "received",
+  "created_at": "2026-11-01T19:37:29Z"
+}

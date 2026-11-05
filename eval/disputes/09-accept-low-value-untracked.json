@@ -1,0 +1,15 @@
+{
+  "id": "09-accept-low-value-untracked",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44061",
+  "buyer": "mei.ling.chen@example.com",
+  "reason": "ITEM_NOT_RECEIVED",
+  "title": "Sticker pack didn't arrive",
+  "body": "Hi, ordered a small sticker pack Oct 18 ($16.75). It was letter mail so no tracking. It's Nov 3 and nothing came. Not a big deal but I'd like the refund. Thanks!",
+  "amount": 16.75,
+  "currency": "USD",
+  "transaction_id": "4WZ66830UV227164K",
+  "attachments": [],
+  "status": "received",
+  "created_at": "2026-11-03T09:58:14Z"
+}

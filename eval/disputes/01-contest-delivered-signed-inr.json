@@ -1,0 +1,17 @@
+{
+  "id": "01-contest-delivered-signed-inr",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44012",
+  "buyer": "samantha.oreilly@example.com",
+  "reason": "ITEM_NOT_RECEIVED",
+  "title": "Order never arrived",
+  "body": "Hi, I'm filing this because my order never showed up. I ordered a pair of running shoes on Oct 21 and it's now Nov 1 and nothing has arrived. I've checked with my neighbors and my building's front desk. I'd like a full refund please. Order total was $89.99.",
+  "amount": 89.99,
+  "currency": "USD",
+  "transaction_id": "5O190127TN914715T",
+  "attachments": [
+    "claim_form.pdf"
+  ],
+  "status": "received",
+  "created_at": "2026-11-01T14:22:10Z"
+}

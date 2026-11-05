@@ -1,0 +1,252 @@
+{
+  "items": [
+    {
+      "id": "ORD-9001",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "create_time": "2026-10-09T15:03:22Z",
+      "payer": {"email_address": "alice.buyer@example.com", "name": {"given_name": "Alice", "surname": "Buyer"}},
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {"currency_code": "USD", "value": "59.99"},
+          "payee": {"merchant_id": "ACME-MERCH-1", "email_address": "merchant@acmewidgets.example"},
+          "shipping": {
+            "name": {"full_name": "Alice Buyer"},
+            "address": {"address_line_1": "1 Main St", "admin_area_2": "San Jose", "admin_area_1": "CA", "postal_code": "95131", "country_code": "US"},
+            "trackers": [
+              {"id": "TRK-9001", "tracking_number": "1Z999AA10123456784", "carrier": "UPS",
+               "status": "DELIVERED", "last_updated_time": "2026-10-14T11:32:00Z"}
+            ]
+          },
+          "payments": {
+            "captures": [
+              {"id": "CAP-9001", "status": "COMPLETED",
+               "amount": {"currency_code": "USD", "value": "59.99"},
+               "final_capture": true,
+               "seller_protection": {"status": "ELIGIBLE", "dispute_categories": ["ITEM_NOT_RECEIVED", "UNAUTHORIZED_TRANSACTION"]},
+               "create_time": "2026-10-09T15:03:30Z"}
+            ]
+          }
+        }
+      ],
+      "links": [{"href": "https://api-m.sandbox.paypal.com/v2/checkout/orders/ORD-9001", "rel": "self", "method": "GET"}]
+    },
+    {
+      "id": "ORD-9002",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "create_time": "2026-10-20T08:41:10Z",
+      "payer": {"email_address": "serial.sam@example.com", "name": {"given_name": "Sam", "surname": "Serial"}},
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {"currency_code": "USD", "value": "24.99"},
+          "payee": {"merchant_id": "ACME-MERCH-1", "email_address": "merchant@acmewidgets.example"},
+          "shipping": {
+            "name": {"full_name": "Sam Serial"},
+            "address": {"address_line_1": "44 Oak Ave", "admin_area_2": "Austin", "admin_area_1": "TX", "postal_code": "73301", "country_code": "US"}
+          },
+          "payments": {
+            "captures": [
+              {"id": "CAP-9002", "status": "COMPLETED",
+               "amount": {"currency_code": "USD", "value": "24.99"},
+               "final_capture": true,
+               "seller_protection": {"status": "NOT_ELIGIBLE"},
+               "create_time": "2026-10-20T08:41:18Z"}
+            ]
+          }
+        }
+      ],
+      "links": [{"href": "https://api-m.sandbox.paypal.com/v2/checkout/orders/ORD-9002", "rel": "self", "method": "GET"}]
+    },
+    {
+      "id": "ORD-9003",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "create_time": "2026-10-22T13:19:47Z",
+      "payer": {"email_address": "bob.carter@example.com", "name": {"given_name": "Bob", "surname": "Carter"}},
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {"currency_code": "USD", "value": "45.00"},
+          "payee": {"merchant_id": "ACME-MERCH-1", "email_address": "merchant@acmewidgets.example"},
+          "shipping": {
+            "name": {"full_name": "Bob Carter"},
+            "address": {"address_line_1": "9 Pine Rd", "admin_area_2": "Denver", "admin_area_1": "CO", "postal_code": "80201", "country_code": "US"},
+            "trackers": [
+              {"id": "TRK-9003", "tracking_number": "9400111899223855112233", "carrier": "USPS",
+               "status": "DELIVERED", "last_updated_time": "2026-10-28T09:15:00Z"}
+            ]
+          },
+          "payments": {
+            "captures": [
+              {"id": "CAP-9003", "status": "COMPLETED",
+               "amount": {"currency_code": "USD", "value": "45.00"},
+               "final_capture": true,
+               "seller_protection": {"status": "ELIGIBLE", "dispute_categories": ["ITEM_NOT_RECEIVED"]},
+               "create_time": "2026-10-22T13:19:55Z"}
+            ]
+          }
+        }
+      ],
+      "links": [{"href": "https://api-m.sandbox.paypal.com/v2/checkout/orders/ORD-9003", "rel": "self", "method": "GET"}]
+    },
+    {
+      "id": "ORD-9004",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "create_time": "2026-10-25T20:44:01Z",
+      "payer": {"email_address": "carol.diaz@example.com", "name": {"given_name": "Carol", "surname": "Diaz"}},
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {"currency_code": "USD", "value": "950.00"},
+          "payee": {"merchant_id": "ACME-MERCH-1", "email_address": "merchant@acmewidgets.example"},
+          "shipping": {
+            "name": {"full_name": "Carol Diaz"},
+            "address": {"address_line_1": "7 Elm Blvd", "admin_area_2": "Phoenix", "admin_area_1": "AZ", "postal_code": "85001", "country_code": "US"},
+            "trackers": [
+              {"id": "TRK-9004", "tracking_number": "1Z999AA10123456799", "carrier": "UPS",
+               "status": "DELIVERED", "last_updated_time": "2026-10-29T16:40:00Z"}
+            ]
+          },
+          "payments": {
+            "captures": [
+              {"id": "CAP-9004", "status": "COMPLETED",
+               "amount": {"currency_code": "USD", "value": "950.00"},
+               "final_capture": true,
+               "seller_protection": {"status": "PARTIALLY_ELIGIBLE", "dispute_categories": ["ITEM_NOT_RECEIVED"]},
+               "create_time": "2026-10-25T20:44:09Z"}
+            ]
+          }
+        }
+      ],
+      "links": [{"href": "https://api-m.sandbox.paypal.com/v2/checkout/orders/ORD-9004", "rel": "self", "method": "GET"}]
+    },
+    {
+      "id": "ORD-9005",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "create_time": "2026-10-27T05:31:36Z",
+      "payer": {"email_address": "totally.legit@example.com", "name": {"given_name": "Totally", "surname": "Legit"}},
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {"currency_code": "USD", "value": "89.00"},
+          "payee": {"merchant_id": "ACME-MERCH-1", "email_address": "merchant@acmewidgets.example"},
+          "shipping": {
+            "name": {"full_name": "Totally Legit"},
+            "address": {"address_line_1": "12 Birch Ln", "admin_area_2": "Reno", "admin_area_1": "NV", "postal_code": "89501", "country_code": "US"},
+            "trackers": [
+              {"id": "TRK-9005", "tracking_number": "1Z999AA10123456800", "carrier": "UPS",
+               "status": "DELIVERED", "last_updated_time": "2026-10-30T10:02:00Z"}
+            ]
+          },
+          "payments": {
+            "captures": [
+              {"id": "CAP-9005", "status": "COMPLETED",
+               "amount": {"currency_code": "USD", "value": "89.00"},
+               "final_capture": true,
+               "seller_protection": {"status": "ELIGIBLE", "dispute_categories": ["ITEM_NOT_RECEIVED", "UNAUTHORIZED_TRANSACTION"]},
+               "create_time": "2026-10-27T05:31:44Z"}
+            ]
+          }
+        }
+      ],
+      "links": [{"href": "https://api-m.sandbox.paypal.com/v2/checkout/orders/ORD-9005", "rel": "self", "method": "GET"}]
+    },
+    {
+      "id": "ORD-9006",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "create_time": "2026-10-26T12:58:20Z",
+      "payer": {"email_address": "serial.sam@example.com", "name": {"given_name": "Sam", "surname": "Serial"}},
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {"currency_code": "USD", "value": "89.99"},
+          "payee": {"merchant_id": "ACME-MERCH-1", "email_address": "merchant@acmewidgets.example"},
+          "shipping": {
+            "name": {"full_name": "Sam Serial"},
+            "address": {"address_line_1": "44 Oak Ave", "admin_area_2": "Austin", "admin_area_1": "TX", "postal_code": "73301", "country_code": "US"},
+            "trackers": [
+              {"id": "TRK-9006", "tracking_number": "1Z999AA10123456811", "carrier": "UPS",
+               "status": "DELIVERED", "last_updated_time": "2026-10-31T14:20:00Z"}
+            ]
+          },
+          "payments": {
+            "captures": [
+              {"id": "CAP-9006", "status": "COMPLETED",
+               "amount": {"currency_code": "USD", "value": "89.99"},
+               "final_capture": true,
+               "seller_protection": {"status": "ELIGIBLE", "dispute_categories": ["ITEM_NOT_RECEIVED", "UNAUTHORIZED_TRANSACTION"]},
+               "create_time": "2026-10-26T12:58:28Z"}
+            ]
+          }
+        }
+      ],
+      "links": [{"href": "https://api-m.sandbox.paypal.com/v2/checkout/orders/ORD-9006", "rel": "self", "method": "GET"}]
+    },
+    {
+      "id": "ORD-9008",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "create_time": "2026-10-24T09:12:51Z",
+      "payer": {"email_address": "erin.ng@example.com", "name": {"given_name": "Erin", "surname": "Ng"}},
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {"currency_code": "USD", "value": "120.00"},
+          "payee": {"merchant_id": "ACME-MERCH-1", "email_address": "merchant@acmewidgets.example"},
+          "shipping": {
+            "name": {"full_name": "Erin Ng"},
+            "address": {"address_line_1": "300 Cedar Ct", "admin_area_2": "Seattle", "admin_area_1": "WA", "postal_code": "98101", "country_code": "US"},
+            "trackers": [
+              {"id": "TRK-9008", "tracking_number": "9400111899223855447788", "carrier": "USPS",
+               "status": "DELIVERED", "last_updated_time": "2026-10-29T08:47:00Z"}
+            ]
+          },
+          "payments": {
+            "captures": [
+              {"id": "CAP-9008", "status": "COMPLETED",
+               "amount": {"currency_code": "USD", "value": "120.00"},
+               "final_capture": true,
+               "seller_protection": {"status": "ELIGIBLE", "dispute_categories": ["ITEM_NOT_RECEIVED"]},
+               "create_time": "2026-10-24T09:12:59Z"}
+            ]
+          }
+        }
+      ],
+      "links": [{"href": "https://api-m.sandbox.paypal.com/v2/checkout/orders/ORD-9008", "rel": "self", "method": "GET"}]
+    },
+    {
+      "id": "ORD-9009",
+      "intent": "CAPTURE",
+      "status": "COMPLETED",
+      "create_time": "2026-10-21T16:37:12Z",
+      "payer": {"email_address": "mismatch.mia@example.com", "name": {"given_name": "Mia", "surname": "Mismatch"}},
+      "purchase_units": [
+        {
+          "reference_id": "default",
+          "amount": {"currency_code": "USD", "value": "70.00"},
+          "payee": {"merchant_id": "ACME-MERCH-1", "email_address": "merchant@acmewidgets.example"},
+          "shipping": {
+            "name": {"full_name": "Mia Mismatch"},
+            "address": {"address_line_1": "5 Willow Way", "admin_area_2": "Portland", "admin_area_1": "OR", "postal_code": "97201", "country_code": "US"}
+          },
+          "payments": {
+            "captures": [
+              {"id": "CAP-9009", "status": "COMPLETED",
+               "amount": {"currency_code": "USD", "value": "70.00"},
+               "final_capture": true,
+               "seller_protection": {"status": "ELIGIBLE", "dispute_categories": ["ITEM_NOT_RECEIVED"]},
+               "create_time": "2026-10-21T16:37:20Z"}
+            ]
+          }
+        }
+      ],
+      "links": [{"href": "https://api-m.sandbox.paypal.com/v2/checkout/orders/ORD-9009", "rel": "self", "method": "GET"}]
+    }
+  ]
+}

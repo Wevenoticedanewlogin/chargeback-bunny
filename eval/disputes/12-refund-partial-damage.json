@@ -1,0 +1,19 @@
+{
+  "id": "12-refund-partial-damage",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44075",
+  "buyer": "sofia.almeida@example.com",
+  "reason": "SNAD",
+  "title": "Item arrived damaged",
+  "body": "The picture frame I ordered ($159.99) arrived with a dented corner and a small crack in the glass. The frame itself still works and looks OK from a distance. Packaging was minimal \u2014 just a plastic wrap, no corner protectors. I don't want to ship it back; a partial refund of maybe 40-50% would be fair.",
+  "amount": 159.99,
+  "currency": "USD",
+  "transaction_id": "8JG44761RD990543T",
+  "attachments": [
+    "damage_photo1.jpg",
+    "damage_photo2.jpg",
+    "packaging_photo.jpg"
+  ],
+  "status": "received",
+  "created_at": "2026-10-30T16:08:51Z"
+}

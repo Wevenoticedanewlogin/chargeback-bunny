@@ -1,0 +1,17 @@
+{
+  "id": "05-contest-unauthorized-3ds-passed",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44039",
+  "buyer": "kwame.adjei@example.com",
+  "reason": "UNAUTHORIZED",
+  "title": "Unauthorized subscription charge",
+  "body": "There's a $64.00 charge from this merchant that I did not authorize. I don't use this service. I want a full refund and I want my card details removed from their system. This is the second time something weird has happened with online charges this year so I'm not taking chances.",
+  "amount": 64.0,
+  "currency": "USD",
+  "transaction_id": "6VF55102MT903418L",
+  "attachments": [
+    "bank_statement_crop.png"
+  ],
+  "status": "received",
+  "created_at": "2026-10-30T21:02:19Z"
+}

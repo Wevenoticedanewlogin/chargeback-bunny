@@ -1,0 +1,19 @@
+{
+  "id": "15-escalate-chargeback-lifecycle",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44087",
+  "buyer": "greg.wentworth@example.com",
+  "reason": "ITEM_NOT_RECEIVED",
+  "title": "Equipment order dispute \u2014 escalated",
+  "body": "This is regarding my $1,450.00 order of photography lighting equipment from Oct 8. I first contacted the seller Oct 15, then again Oct 22. They claimed it shipped Oct 10, then said Oct 18, then gave me a tracking number that doesn't work. I have also filed a chargeback with my card issuer because I don't trust this process. I expect PayPal to rule in my favor given the seller's contradictory statements.",
+  "amount": 1450.0,
+  "currency": "USD",
+  "transaction_id": "9BS77042LG116925H",
+  "attachments": [
+    "message_thread.txt",
+    "tracking_screenshot.png",
+    "chargeback_confirmation.pdf"
+  ],
+  "status": "received",
+  "created_at": "2026-11-03T20:31:55Z"
+}

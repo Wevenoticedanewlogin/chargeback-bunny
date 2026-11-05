@@ -1,0 +1,18 @@
+{
+  "id": "14-escalate-highvalue-signature-dispute",
+  "merchant_id": "",
+  "paypal_dispute_id": "PP-D-44083",
+  "buyer": "lena.voss@example.com",
+  "reason": "ITEM_NOT_RECEIVED",
+  "title": "Camera never received \u2014 signature is not mine",
+  "body": "I ordered a mirrorless camera for $780.00 on Oct 20. Tracking says it was delivered Oct 24 and signed for, but I was at work all day and that signature is absolutely not mine \u2014 it doesn't even look like my name. I checked with everyone in my building. For a purchase this large I expect a real investigation, not a form letter. I will not accept being out $780 for a package handed to a stranger.",
+  "amount": 780.0,
+  "currency": "USD",
+  "transaction_id": "6QA55198BD334807F",
+  "attachments": [
+    "signature_image.png",
+    "work_schedule.pdf"
+  ],
+  "status": "received",
+  "created_at": "2026-11-01T08:19:27Z"
+}
