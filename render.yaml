@@ -1,0 +1,15 @@
+# One-click Render deploy (Blueprint). Hosts the zero-credential demo:
+# offline heuristic engine + mock PayPal client, demo corpus seeded at boot.
+services:
+  - type: web
+    name: chargeback-bunny
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m chargebackbunny.cli demo && python -m chargebackbunny.cli serve --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: CHARGEBUNNY_PAYPAL_MOCK
+        value: "1"
+      - key: PYTHON_VERSION
+        value: "3.12.8"
+    healthCheckPath: /api/health
