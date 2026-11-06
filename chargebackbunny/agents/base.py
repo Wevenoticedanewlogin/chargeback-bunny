@@ -6,6 +6,7 @@ persisted as an ``AgentTrace`` — the audit trail is a first-class artifact.
 
 from __future__ import annotations
 
+import json
 import uuid
 from dataclasses import dataclass, field
 
@@ -28,9 +29,38 @@ class CaseContext:
     async def ask(
         self, *, stage: str, system: str, user: str, schema: dict, model: str | None = None
     ) -> tuple[dict, AgentTrace]:
-        """Call the LLM, persist an AgentTrace, return (parsed_json, trace)."""
+        """Call the LLM, persist an AgentTrace, return (parsed_json, trace).
+
+        Hosted models occasionally emit malformed JSON (unescaped quotes,
+        truncation). One repair retry with a stricter instruction absorbs
+        that; both calls are traced so the audit trail stays complete.
+        """
         if FENCE_BEGIN in user:
             system = system + UNTRUSTED_NOTICE
+        result, trace = await self._call(stage=stage, system=system, user=user, schema=schema, model=model)
+        try:
+            parsed = extract_json(result.text)
+            if not _is_schema_echo(parsed, schema):
+                return parsed, trace
+        except json.JSONDecodeError:
+            pass
+
+        repair_system = system + (
+            "\nYour previous reply was not usable: it was invalid JSON or it "
+            "repeated the JSON Schema instead of an answer. Respond with ONLY "
+            "one complete JSON object that is an INSTANCE of the schema — "
+            "field names from 'properties' at the top level, real values, no "
+            "'type'/'properties'/'required' keys, no prose, no markdown "
+            "fences, quotes inside string values escaped."
+        )
+        result, trace = await self._call(
+            stage=stage, system=repair_system, user=user, schema=schema, model=model
+        )
+        return extract_json(result.text), trace
+
+    async def _call(
+        self, *, stage: str, system: str, user: str, schema: dict, model: str | None
+    ):
         result = await self.llm.complete(
             system=system,
             user=user,
@@ -51,11 +81,30 @@ class CaseContext:
             latency_ms=result.latency_ms,
         )
         self.store.save_trace(trace)
-        return extract_json(result.text), trace
+        return result, trace
 
     @property
     def llm_used(self) -> bool:
         return self.llm.provider != "offline"
+
+
+def _is_schema_echo(parsed: object, schema: dict) -> bool:
+    """Detect a model answering with the JSON Schema itself instead of an instance.
+
+    Some OpenAI-compatible providers (e.g. DeepSeek in json_object mode)
+    occasionally mirror the schema back with values inlined under
+    'properties'. It parses as JSON but every consumer reads empty fields —
+    treat it as a failed call so the repair retry fires.
+    """
+    if not isinstance(parsed, dict):
+        return True  # stage consumers require an object
+    if "properties" in parsed and not (
+        set(parsed)
+        - {"x-stage", "type", "properties", "required", "$schema", "additionalProperties"}
+    ):
+        return True
+    props = set((schema.get("properties") or {}))
+    return bool(props) and not (set(parsed) & props)
 
 
 FENCE_BEGIN = "<<<BEGIN_UNTRUSTED_CLAIM>>>"

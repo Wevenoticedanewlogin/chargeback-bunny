@@ -10,6 +10,8 @@ And the buyers' claims themselves are getting adversarial. Once sellers adopt AI
 
 The work is largely mechanical: classify the claim, pull the evidence, check it against the order record, score the exposure, draft the response. Humans are needed for judgment calls — not for the plumbing around them.
 
+Chargeback-automation SaaS incumbents (Chargeflow, Justt) are enterprise, closed, merchant-only, and priced as a cut of recoveries. Chargeback Bunny is the opposite shape: **PayPal-native** (Disputes + Orders APIs directly, no middle layer), **transparent** (every verdict cites evidence, every model call is traced and inspectable), **two-sided** (the scam-claim quarantine protects defrauded *buyers* too, which no chargeback SaaS does), and open source.
+
 ## What Chargeback Bunny does
 
 Every dispute runs through a multi-stage agent pipeline and comes out with a structured verdict, a drafted response, and a complete audit trail:
@@ -92,8 +94,9 @@ python -m chargebackbunny.cli eval     # fresh DB, prints per-case table + agree
 | Configuration | Decision agreement | Risk agreement | Scam claims quarantined |
 |---|---|---|---|
 | Offline heuristic engine (no keys) | **20/20 (100%)** | 20/20 | 4/4 |
+| DeepSeek `deepseek-chat` (live API, judge same model) | **20/20 (100%)** | 20/20 | 4/4 |
 
-Read that honestly: the offline engine is deterministic rules, and the corpus labels were designed against those rules — 20/20 is the engine reproducing its own spec, not evidence of judgment. It exists so anyone can verify the pipeline mechanics with zero credentials. The live-model row is the meaningful measurement and is published after the live run.
+Read both rows honestly. The offline engine is deterministic rules, and the corpus labels were designed against those rules — 20/20 there is the engine reproducing its own spec, not evidence of judgment; it exists so anyone can verify the pipeline mechanics with zero credentials. The live row is the real model making the judgments — but the corpus is ours and modest in size, so treat it as a smoke measurement, not a benchmark. The first live run scored 18/20: the debate council overruled two correct `contest` verdicts on unauthorized claims because the judge demanded fulfillment tracking and read the 3-D Secure liability shift backwards. Both failures were conservative (contest → refund, the merchant-safe direction), the fix was domain semantics in the judge prompt plus a JSON repair retry — and the rerun is the row above. Every stage call of every case is traced and inspectable in the dashboard.
 
 ## Offline mode
 

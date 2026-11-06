@@ -93,7 +93,7 @@
   .kpi .n { font: 800 23px/1.1 var(--mono); }
   .kpi .l { color: var(--faint); font-size: 9.5px; letter-spacing: 1.4px; text-transform: uppercase; margin-top: 3px; }
   .kpi .sub { color: var(--dim); font: 600 9.5px var(--mono); margin-top: 4px; }
-  .kpi .n.blue { color: var(--pp-sky); } .kpi .n.gold { color: var(--warn); } .kpi .n.red { color: var(--bad); }
+  .kpi .n.blue { color: var(--pp-sky); } .kpi .n.gold { color: var(--warn); } .kpi .n.red { color: var(--bad); } .kpi .n.good { color: var(--good); }
   .kpi .mini { font: 700 10.5px var(--mono); line-height: 1.7; color: var(--dim); word-break: break-word; }
 
   /* ---------- view nav ---------- */
@@ -421,6 +421,7 @@
   <div class="kpi" style="animation-delay:.06s"><div class="n" id="kTriaging">–</div><div class="l">Triaging</div></div>
   <div class="kpi" style="animation-delay:.10s"><div class="n" id="kResponded">–</div><div class="l">Responded</div></div>
   <div class="kpi" style="animation-delay:.14s"><div class="n gold" id="kAtRisk">–</div><div class="l">$ at risk in queue</div></div>
+  <div class="kpi" style="animation-delay:.16s"><div class="n good" id="kRecoverable">–</div><div class="l">recoverable via contest</div></div>
   <div class="kpi" style="animation-delay:.18s"><div class="mini" id="kDecisions">–</div><div class="l">Verdicts by decision</div></div>
   <div class="kpi" style="animation-delay:.22s"><div class="mini" id="kRisk">–</div><div class="l">Verdicts by risk</div></div>
 </div>
@@ -779,6 +780,7 @@ async function refreshAll() {
   try {
     state.queueItems = await getQueueItems();
     $("kAtRisk").textContent = money(state.queueItems.reduce((s, i) => s + (i.verdict?.amount_at_risk || 0), 0));
+    $("kRecoverable").textContent = money(state.queueItems.reduce((s, i) => s + (i.verdict?.decision === "contest" ? (i.verdict.amount_at_risk || 0) : 0), 0));
     renderQueue();
   } catch (e) { toast("queue refresh failed: " + e.message, true); }
 }

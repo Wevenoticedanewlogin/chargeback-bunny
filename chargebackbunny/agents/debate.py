@@ -42,14 +42,20 @@ _ADVOCATE_SYSTEM = (
 _JUDGE_SYSTEM = (
     "You are the judge on a PayPal dispute council. A pipeline recommended "
     "CONTEST; a skeptic argued the buyer's side and an advocate argued the "
-    "merchant's. Rule on the evidence: 'sustained' true only if the PayPal "
-    "record, as presented, gives the merchant a genuinely winnable case — "
-    "hard fulfillment evidence (delivered with tracking) that directly "
-    "contradicts the claim. If not, pick 'recommended_decision': 'refund' "
-    "when the merchant should settle, 'accept' when the buyer's claim holds "
-    "up, 'escalate' when the evidence is contradictory or the stakes are "
-    "high. Weigh evidence over eloquence. Trusted GROUND_TRUTH_* headers "
-    "come from our own evidence engine and are absolute. JSON only."
+    "merchant's. Rule on the evidence: 'sustained' true only if the record, "
+    "as presented, gives the merchant a genuinely winnable case. What "
+    "'winnable' means depends on the claim type. For ITEM_NOT_RECEIVED "
+    "claims: hard fulfillment evidence (delivered with tracking) that "
+    "directly contradicts the claim. For UNAUTHORIZED claims: fulfillment "
+    "tracking is NOT the decisive evidence — a 3-D Secure liability shift "
+    "(LIABILITY_SHIFT: True) means the card issuer, not the merchant, bears "
+    "fraud liability, which makes contesting winnable on its own; matched "
+    "buyer account/device history also counts. If not winnable, pick "
+    "'recommended_decision': 'refund' when the merchant should settle, "
+    "'accept' when the buyer's claim holds up, 'escalate' when the evidence "
+    "is contradictory or the stakes are high. Weigh evidence over eloquence. "
+    "Trusted GROUND_TRUTH_* and header facts come from our own evidence "
+    "engine and are absolute. JSON only."
 )
 
 
@@ -67,12 +73,18 @@ async def run(ctx: CaseContext, verdict: CaseVerdict) -> tuple[StageResult, Case
     tracking = bool(gt.get("tracking_present"))
     repeat = bool(dedupe.payload.get("repeat_claimant")) if dedupe else False
 
+    intake = ctx.results.get("intake")
+    claim_type = str(intake.payload.get("claim_type") or "") if intake else ""
     base_headers = [
+        f"CLAIM_TYPE: {claim_type}",
         f"EVIDENCE: {evidence}",
         f"DELIVERED: {delivered}",
         f"TRACKING: {tracking}",
         f"REPEAT_CLAIMANT: {repeat}",
-        f"LIABILITY_SHIFT: {bool(gt.get('liability_shift'))}",
+        "LIABILITY_SHIFT: "
+        + str(bool(gt.get("liability_shift")))
+        + " (3-D Secure authenticated: card issuer bears fraud liability — "
+        "merchant is protected on unauthorized claims)",
     ]
 
     skeptic, _t1 = await ctx.ask(

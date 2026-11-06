@@ -122,7 +122,9 @@ class ChatCompletionsClient:
                 # Provider rejected structured output; fall back to json_object
                 # with the schema spelled out in the system prompt.
                 body["messages"][0]["content"] += (
-                    "\nRespond with ONLY a JSON object matching this JSON Schema:\n"
+                    "\nRespond with ONLY a JSON object that is an INSTANCE of "
+                    "this JSON Schema (fields at the top level, real values — "
+                    "do not repeat the schema itself):\n"
                     + json.dumps(json_schema)
                 )
                 body["response_format"] = {"type": "json_object"}
